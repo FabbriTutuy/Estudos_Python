@@ -1,0 +1,5 @@
+x = str(input('Escolha um número de 1111 a 9999 '))
+print (f'Seu milhar é {x[0]}')
+print(f'Sua centena é {x[1]}')
+print(f'Sua dezena é {x[2]}')
+print(f'Sua unidade é {x[3]}')

@@ -1,0 +1,57 @@
+
+-=-=-=-=-=-=-=-=-=- ESTUDOS UDEMY PYTHON DO BÁSICO AO AVANÇADO -=-=-=-=-=-=-=-=-=-
+
+------------------------ FUNCÃO RECURSIVAS ------------------------
+São aquelas funções que chamam outras funções parecido com um loop 
+Exemplo:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+def fatorial(n):                   |
+    if n == 0:                     |
+        return 1                   |
+    else:                          |
+        return n * fatorial(n-1)   |
+                                   |
+print(fatorial(4))                 | 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+essa função serve para calcular fatorial , ou seja, ela vai ficar se
+repetindo atéaté que acabe.
+
+------------------------ TRY , EXCEPT, ELSE e FINALLY ------------------------
+try -> é o bloco que você coloca que pode dar erro "Tentar"
+Função: “Tentar” executar o código
+
+except -> Bloco que captura o erro se ele acontecer no try
+Função: Impede que o programa quebre e permite tratar o erro.
+
+else -> Bloco que roda se NÃO houver erro no try
+Função: Separar o código de sucesso do tratamento de erro
+
+finally -> Bloco que roda sempre, com erro ou sem erro.
+Função: Usado para fechar conexões, liberar arquivos, ou apenas finalizar o processo
+
+Exemplo :
+try:
+    # Código que pode dar erro
+    num = int(input("Digite um número: "))
+except ValueError:
+    # O que fazer se der erro
+    print("Você digitou algo que não é número.")
+else:
+    # O que fazer se der certo
+    print(f"Número digitado: {num}")
+finally:
+    # O que fazer de qualquer jeito
+    print("Fim da execução.")
+
+Para criar uma:
+
+=-=-=-= lista abra [] =-=-=-=
+dentro de uma lista pode se colocar ~~~~.append()~~~~ para adicionar um item na lista
+~~~~.insert()~~~~ para adicionar a posição que deve ir na lista ~~~~.insert(posicao, objeto)~~~~
+E ~~~~.remove()~~~~ para remover algum item da lista
+Para printar apenas um item da lista usa print(lista[0]) e zero sendo a posição desejada
+se quiser pode colocar até onde deseja ir Exemplo print(lista[0:3]) quero que ele printa até parar no três
+
+=-=-=-= dicionario {} =-=-=-=
+=-=-=-= tupla () =-=-=-=

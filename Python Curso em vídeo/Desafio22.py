@@ -1,0 +1,5 @@
+x = str(input('Qual o nome da Pessoa? ')).strip()
+print(f'O nome dessa pessoa com todas letra maiusculas é {x.upper()}')
+print(f'O nome dessa pessoa com todas letras minisculas é {x.lower()}')
+print(f'O nome dele(a) tem um total de {len(x) - x.count(" ")} sem considerar o espaço ')
+print(f'Seu primeiro nome tem {x.find(" ")} de letras ')

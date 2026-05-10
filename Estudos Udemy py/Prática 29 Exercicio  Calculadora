@@ -1,0 +1,88 @@
+import math
+import time
+
+# FUNÇÕES 
+def soma(a , b):
+    return a + b
+
+def subtração(a , b):
+    return a - b
+
+def multiplicação(a , b):
+    return a * b
+
+def divisão(a , b):
+    if b == 0:
+        return "Erro! Não existe divisão de zero"
+    return a / b    
+
+def potenciação(a , b):
+    return a ** b
+
+def raiz_quadrada(a):
+    if a < 0: 
+        return "Erro! Não há raiz quadrada de números negativos"
+    return math.sqrt(a)
+
+total_conts = 0
+
+#LOOP
+while True:
+
+    operação = int(input(f"""{10*"=-"} Calculadora 1.0v {10*"=-"}
+[1] Soma 
+[2] Subtração 
+[3] Multiplicação
+[4] Divisão
+[5] Potenciação
+[6] Raiz Quadrada 
+[7] Sair
+{29*"=-"}\n"""))
+    
+    print(operação)
+    qual_operacao = int(input("Qual operação deseja fazer? "))
+
+    if qual_operacao == 1:
+        a = int(input("Digite o primeiro número: "))
+        b = int(input("Digite o segundo número: "))
+        total_conts+=1
+        print(soma(a,b))
+    
+    elif qual_operacao == 2:
+        a = int(input("Digite o primeiro número: "))
+        b = int(input("Digite o segundo número: "))
+        total_conts+=1
+        print(subtração(a,b))   
+    
+    elif qual_operacao == 3:
+        a = int(input("Digite o primeiro número: "))
+        b = int(input("Digite o segundo número: "))
+        total_conts+=1
+        print(multiplicação(a,b))
+
+    elif qual_operacao == 4:
+        a = int(input("Digite o primeiro número: "))
+        b = int(input("Digite o segundo número: "))
+        total_conts+=1
+        print(divisão(a,b))         
+
+    elif qual_operacao == 5:    
+        a = int(input("Digite o primeiro número: "))
+        b = int(input("Digite o segundo número: "))
+        total_conts+=1
+        print(potenciação(a,b))
+
+    elif qual_operacao == 6:    
+        a = int(input("Digite o número: "))
+        total_conts+=1
+        print(raiz_quadrada(a))
+
+    elif qual_operacao == 7:
+        print("Saindo...")
+        time.sleep(1)
+        break
+
+print(f"Muito obrigado por usar o programa, Você fez um total de {total_conts} contas")
+    
+
+    
