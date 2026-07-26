@@ -2,38 +2,45 @@ from rich import print
 from time import sleep
 
 class Livro():
+
+    def __init__(self,titulo,paginas):
+        self.titulo = titulo
+        self.total_paginas = paginas
+        self.pagina_atual = 1
+
+        print(f":open_book: Você acabou de abrir o livro {self.titulo} que tem {self.total_paginas} páginas no total. Você agora está na página {self.pagina_atual}")
+
+
+    def avancar_paginas(self, qtd = 1):
+
+        cont = 0
+
+        for pg in range(0,qtd,1):
+
+            if not self.fim_do_livro():
+
+                self.pagina_atual += 1
+                print(f"Pág{self.pagina_atual} :arrow_forward: ", end="")
+                sleep(0.4)
+                cont += 1
+
+        print(f"[blue]Você agora está na [yellow]página {self.pagina_atual}[/][blue]")
+
+        if self.fim_do_livro():
+            print(f":closed_book: [red]Você chegou ao final do livro {self.titulo}[/red]")
+
+
+    def fim_do_livro(self) -> bool:
+
+        return True if self.pagina_atual == self.total_paginas else False
     
-    def __init__(self,livro,paginas):
-        
-        self.livro = livro
-        self.paginas = paginas
-
-        print(f"Você acabou de ler o [bold blue]livro :'{livro}'[/] que tem [bold green]{paginas} paginas[/]")
-
-
-    def passar_paginas(self,quantidade):
-        
-        paginas_total = self.paginas
-        paginas_lidas = 0
-
-        for n in range(1,quantidade+1):
-
-            if paginas_total == paginas_lidas:
-                break 
-
-            else:
-
-                sleep(0.3)
-                paginas_lidas+=1
-                print(f'Pág -> {n} ', end='')
-
-        if paginas_total == paginas_lidas:
-            print(f"\n[bold green]Você chegou ao fim do livro[/]")
-
-        else:
-            print(f"\n[bold yellow]Você avançou {quantidade} páginas e parou na página {quantidade+1}[/]")
+        # =-=-=-=- Ou pode se fazer desse jeito -=-=-=-=
+        #   if self.pagina_atual == self.total_paginas:
+        #     return True
+        #   else:
+        #      return False
 
 
-l1 = Livro("O Homen que descobriou a lua",18)
-
-l1.passar_paginas(10)
+l1 = Livro("Senhor dos anéis",19)
+l1.avancar_paginas(7)
+l1.avancar_paginas(14)
